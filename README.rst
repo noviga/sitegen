@@ -3,13 +3,6 @@ SiteGen
 
 SiteGen is the static site generator.
 
-Build
-=====
-
-Build::
-
-    cargo build
-
 Usage
 =====
 
@@ -37,7 +30,7 @@ Usage
     # or
     sitegen = { git = "https://github.com/noviga/sitegen" }
 
-3. Att to your generator script::
+3. Add to your generator script::
 
     fn main() {
         let out_dir = "site";
@@ -47,8 +40,12 @@ Usage
         sitegen::copy_static(&out_dir, "css").unwrap();
         sitegen::copy_static(&out_dir, "fonts").unwrap();
         sitegen::copy_static(&out_dir, "img").unwrap();
-        sitegen::write_cname(&out_dir, "mybestwebsite.com").unwrap();
+        sitegen::write_cname(&out_dir, "my-best-website.com").unwrap();
     }
+
+4. Build the website and find it in ``site`` directory::
+
+    cargo run
 
 License
 =======
