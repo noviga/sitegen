@@ -6,8 +6,9 @@ SiteGen is the static site generator.
 Usage
 =====
 
-1. Website source files should have the following directory structure (file names are for exapmle)::
+1. Website source files should have the following directory structure (file names are for exapmle):
 
+```
     |-- static
     |   |-- css
     |   |-- fonts
@@ -22,16 +23,20 @@ Usage
         |-- templates
         |   `-- layout.hbs
         `-- main.rs
+```
 
-2. Add ``sitegen`` to your ``Cargo.toml``::
+2. Add `sitegen` to your `Cargo.toml`:
 
+```toml
     [dependencies]
     sitegen = "0.0"
     # or
     sitegen = { git = "https://github.com/noviga/sitegen" }
+```
 
-3. Add to your generator script::
+3. Add to your generator script:
 
+```rust
     fn main() {
         let out_dir = "site";
         sitegen::render_css(&out_dir, "main").unwrap();
@@ -42,12 +47,15 @@ Usage
         sitegen::copy_static(&out_dir, "img").unwrap();
         sitegen::write_cname(&out_dir, "my-best-website.com").unwrap();
     }
+```
 
-4. Build the website and find it in ``site`` directory::
+4. Build the website and find it in the `site` directory:
 
+```
     cargo run
+```
 
 License
 =======
 
-Source code is licensed under `MIT license <LICENSE>`__.
+Source code is licensed under [MIT license](LICENSE).

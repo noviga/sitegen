@@ -3,7 +3,9 @@ name = "sitegen"
 description = "Static site generator"
 version = "0.0.1"
 authors = ["Shamil Yakupov <s.yakupov@noviga.com>"]
+repository = "https://github.com/noviga/sitegen/"
 license = "MIT"
+readme = "README.md"
 edition = "2018"
 
 [lib]
